@@ -9,7 +9,6 @@ import os
 
 # Create an instance of the Flask class for our web app
 app = Flask(__name__)
-
 # Register the blueprint 'app_views' to the Flask app instance
 app.register_blueprint(app_views)
 

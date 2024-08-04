@@ -7,8 +7,13 @@ from models import storage
 from api.v1.views import app_views
 import os
 
+
 # Create an instance of the Flask class for our web app
 app = Flask(__name__)
+
+# Configure CORS
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 # Register the blueprint 'app_views' to the Flask app instance
 app.register_blueprint(app_views)
 
